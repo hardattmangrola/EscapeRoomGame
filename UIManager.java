@@ -229,7 +229,7 @@ public class UIManager {
         timerLabel.setForeground(new Color(100, 200, 255)); // Light Blue
         
         // Initialize timer display
-        timerLabel.setText("⏱️ Time: 60s");
+        timerLabel.setText("Time: 60s");
         
         hudPanel.add(playerNameLabel);
         hudPanel.add(livesLabel);
@@ -353,33 +353,19 @@ public class UIManager {
     private JButton createStyledButton(String text) {
         JButton button = new JButton(text);
         button.setFont(new Font("Arial", Font.BOLD, 14));
-        button.setBackground(new Color(0, 120, 255)); // Bright blue by default
-        button.setForeground(Color.WHITE);
-        button.setFocusPainted(false);
-        button.setOpaque(true);
-        button.setBorder(BorderFactory.createCompoundBorder(
-            BorderFactory.createRaisedBevelBorder(),
-            BorderFactory.createEmptyBorder(8, 16, 8, 16)
-        ));
-        button.setPreferredSize(new Dimension(160, 45));
-        button.setVisible(true);
         
-        // Force blue color to be visible
+        // Use default button styling for better visibility
+        button.setBackground(javax.swing.UIManager.getColor("Button.background"));
+        button.setForeground(javax.swing.UIManager.getColor("Button.foreground"));
+        button.setFocusPainted(true);
+        button.setOpaque(true);
         button.setContentAreaFilled(true);
         button.setBorderPainted(true);
         
-        // Blue hover effects
-        button.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                button.setBackground(new Color(0, 180, 255)); // Lighter blue
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                button.setBackground(new Color(0, 120, 255)); // Original bright blue
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                button.setBackground(new Color(0, 100, 200)); // Darker blue
-            }
-        });
+        // Use default border
+        button.setBorder(javax.swing.UIManager.getBorder("Button.border"));
+        button.setPreferredSize(new Dimension(160, 45));
+        button.setVisible(true);
         
         return button;
     }
