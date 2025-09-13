@@ -26,6 +26,11 @@ A GUI-based Escape Room Game built in Java with immersive features, puzzles, and
 - **Visual Feedback**: Color-coded rooms and status indicators
 - **Interactive Elements**: Easy-to-use buttons and text fields
 
+## Snapshots
+
+![image_alt](https://github.com/hardattmangrola/EscapeRoomGame/blob/2dc504609694564437aad1daabaa125e718611cd/game1.png)
+![image_alt](https://github.com/hardattmangrola/EscapeRoomGame/blob/2dc504609694564437aad1daabaa125e718611cd/game2.png)
+
 ## How to Play
 
 ### Getting Started
